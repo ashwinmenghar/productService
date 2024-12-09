@@ -1,5 +1,7 @@
 package dev.ashwin.productservice.controllers;
 
+import dev.ashwin.productservice.dtos.ProductDto;
+import dev.ashwin.productservice.models.Product;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,7 +19,7 @@ public class ProductController {
     }
 
     @PostMapping()
-    public String addNewProduct() {
+    public String addNewProduct(@RequestBody ProductDto product) {
         return "Add New Product";
     }
 
